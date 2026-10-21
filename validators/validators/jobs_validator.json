@@ -1,0 +1,28 @@
+
+{
+  "$jsonSchema": {
+    "title": "data_cleaning_db.jobs",
+    "bsonType": "object",
+    "required": ["user_id", "file_name", "status"],
+    "properties": {
+      "user_id": {
+        "bsonType": "objectId",
+        "description": "User ID must be an ObjectId"
+      },
+      "file_name": {
+        "bsonType": "string",
+        "description": "File name must be a string"
+      },
+      "file_type": {
+        "bsonType": "string"
+      },
+      "status": {
+        "bsonType": "string",
+        "description": "Job status must be a string"
+      },
+      "created_at": {
+        "bsonType": "date"
+      }
+    }
+  }
+}
