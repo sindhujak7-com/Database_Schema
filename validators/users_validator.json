@@ -1,0 +1,21 @@
+{
+  "$jsonSchema": {
+    "title": "data_cleaning_db.users",
+    "bsonType": "object",
+    "required": ["name", "email"],
+    "properties": {
+      "name": {
+        "bsonType": "string",
+        "description": "User name must be a string"
+      },
+      "email": {
+        "bsonType": "string",
+        "description": "Email must be a string"
+      },
+      "created_at": {
+        "bsonType": "date",
+        "description": "Account creation date must be a date"
+      }
+    }
+  }
+}
