@@ -1,0 +1,35 @@
+
+{
+  "database": "data_cleaning_db",
+  "collections": {
+    "users": {
+      "fields": {
+        "name": "string",
+        "email": "string",
+        "created_at": "date"
+      },
+      "required": ["name", "email"]
+    },
+    "jobs": {
+      "fields": {
+        "user_id": "objectId",
+        "file_name": "string",
+        "file_type": "string",
+        "status": "string",
+        "created_at": "date"
+      },
+      "required": ["user_id", "file_name", "status"]
+    },
+    "cleaning_reports": {
+      "fields": {
+        "job_id": "objectId",
+        "rows_before": "integer",
+        "rows_after": "integer",
+        "duplicates_removed": "integer",
+        "missing_values_fixed": "integer",
+        "created_at": "date"
+      },
+      "required": ["job_id", "rows_before", "rows_after"]
+    }
+  }
+}
