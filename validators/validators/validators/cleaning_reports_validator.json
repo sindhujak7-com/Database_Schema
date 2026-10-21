@@ -1,0 +1,31 @@
+
+{
+  "$jsonSchema": {
+    "title": "data_cleaning_db.cleaning_reports",
+    "bsonType": "object",
+    "required": ["job_id", "rows_before", "rows_after"],
+    "properties": {
+      "job_id": {
+        "bsonType": "objectId",
+        "description": "Job ID must be an ObjectId"
+      },
+      "rows_before": {
+        "bsonType": "int",
+        "description": "Rows before cleaning must be an integer"
+      },
+      "rows_after": {
+        "bsonType": "int",
+        "description": "Rows after cleaning must be an integer"
+      },
+      "duplicates_removed": {
+        "bsonType": "int"
+      },
+      "missing_values_fixed": {
+        "bsonType": "int"
+      },
+      "created_at": {
+        "bsonType": "date"
+      }
+    }
+  }
+}
